@@ -74,7 +74,7 @@ struct Login: View {
             .padding(.top)
             
             HStack(spacing: 15) {
-                Button(action: {}, label: {
+                Button(action: loginModel.varifyUser, label: {
                     Text("LOGIN")
                         .fontWeight(.bold)
                         .foregroundColor(.black)
@@ -123,5 +123,12 @@ struct Login: View {
         }
         .background(Color("bg").ignoresSafeArea(.all, edges: .all))
         .animation(.easeInOut)
+        .alert(isPresented: $loginModel.alert, content: {
+            Alert(
+                title: Text("Error"),
+                message: Text(loginModel.alertMessage),
+                dismissButton: .destructive(Text("Ok"))
+            )
+        })
     }
 }

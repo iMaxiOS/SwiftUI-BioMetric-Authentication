@@ -13,6 +13,7 @@
 		AC04EDAE257E299700788A7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC04EDAD257E299700788A7A /* Preview Assets.xcassets */; };
 		AC04EDBA257E2B6400788A7A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04EDB9257E2B6400788A7A /* Login.swift */; };
 		ACC70607257E565600B8EB7A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC70606257E565600B8EB7A /* LoginViewModel.swift */; };
+		ACEA6AAE257E62AD002861DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACEA6AAD257E62AD002861DC /* GoogleService-Info.plist */; };
 		BF15D6ED012EF9C81D2C89C3 /* Pods_BioMetric_Authentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DF092EACC57B19F67FC41A /* Pods_BioMetric_Authentication.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +27,8 @@
 		AC04EDAD257E299700788A7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC04EDAF257E299700788A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC04EDB9257E2B6400788A7A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		ACC70601257E55E500B8EB7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACC70606257E565600B8EB7A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		ACEA6AAD257E62AD002861DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C69AEEC6927923A8AFBCB216 /* Pods-BioMetric-Authentication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BioMetric-Authentication.release.xcconfig"; path = "Target Support Files/Pods-BioMetric-Authentication/Pods-BioMetric-Authentication.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +65,7 @@
 		AC04EDA5257E299600788A7A /* BioMetric-Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				ACC70601257E55E500B8EB7A /* GoogleService-Info.plist */,
+				ACEA6AAD257E62AD002861DC /* GoogleService-Info.plist */,
 				AC04EDA6257E299600788A7A /* BioMetric_AuthenticationApp.swift */,
 				AC04EDA8257E299600788A7A /* ContentView.swift */,
 				ACC70603257E560900B8EB7A /* Views */,
@@ -178,6 +179,7 @@
 			files = (
 				AC04EDAE257E299700788A7A /* Preview Assets.xcassets in Resources */,
 				AC04EDAB257E299700788A7A /* Assets.xcassets in Resources */,
+				ACEA6AAE257E62AD002861DC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

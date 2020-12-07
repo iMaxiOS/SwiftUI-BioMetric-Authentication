@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LocalAuthentication
+import Firebase
 
 class LoginViewModel: ObservableObject {
     
@@ -14,12 +15,13 @@ class LoginViewModel: ObservableObject {
     @Published var password = ""
     @Published var alert = false
     @Published var alertMessage = ""
+    @Published var store_info = false
     
     @AppStorage("status") var logged = false
     @AppStorage("stored_User") var Stored_User = ""
     @AppStorage("stored_Password") var Stored_Password = ""
     
-    func getBioMetricStatus() -> Bool{
+    func getBioMetricStatus() -> Bool {
         let scanner = LAContext()
         
         if email == Stored_User && scanner.canEvaluatePolicy(
@@ -41,6 +43,24 @@ class LoginViewModel: ObservableObject {
             if error != nil {
                 print("🍎🍎🍎\(error!.localizedDescription)")
                 return
+            }
+        }
+    }
+    
+    func verifyUser() {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                self.alertMessage = error.localizedDescription
+                self.alert.toggle()
+            }
+            
+            if self.Stored_User == "" || self.Stored_Password == "" {
+                self.store_info.toggle()
+                return
+            }
+            
+            withAnimation{
+                self.logged = true
             }
         }
     }
