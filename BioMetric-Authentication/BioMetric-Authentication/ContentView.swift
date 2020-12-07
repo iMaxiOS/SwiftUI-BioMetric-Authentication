@@ -6,11 +6,26 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct ContentView: View {
+    
+    @AppStorage("status") var logged = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView {
+            if logged {
+                Text("User Logged in.....")
+                    .navigationTitle("Home")
+                    .navigationBarHidden(false)
+                    .preferredColorScheme(.light)
+            } else {
+                Home()
+                    .preferredColorScheme(.dark)
+                    .navigationBarHidden(true)
+            }
+        }
     }
 }
 

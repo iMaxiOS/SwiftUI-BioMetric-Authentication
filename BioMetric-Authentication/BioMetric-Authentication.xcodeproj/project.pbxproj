@@ -11,6 +11,7 @@
 		AC04EDA9257E299600788A7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04EDA8257E299600788A7A /* ContentView.swift */; };
 		AC04EDAB257E299700788A7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC04EDAA257E299700788A7A /* Assets.xcassets */; };
 		AC04EDAE257E299700788A7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC04EDAD257E299700788A7A /* Preview Assets.xcassets */; };
+		AC04EDBA257E2B6400788A7A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04EDB9257E2B6400788A7A /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		AC04EDAA257E299700788A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC04EDAD257E299700788A7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC04EDAF257E299700788A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC04EDB9257E2B6400788A7A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				AC04EDA6257E299600788A7A /* BioMetric_AuthenticationApp.swift */,
 				AC04EDA8257E299600788A7A /* ContentView.swift */,
+				AC04EDB9257E2B6400788A7A /* Home.swift */,
 				AC04EDAA257E299700788A7A /* Assets.xcassets */,
 				AC04EDAF257E299700788A7A /* Info.plist */,
 				AC04EDAC257E299700788A7A /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC04EDA9257E299600788A7A /* ContentView.swift in Sources */,
+				AC04EDBA257E2B6400788A7A /* Home.swift in Sources */,
 				AC04EDA7257E299600788A7A /* BioMetric_AuthenticationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +273,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BioMetric-Authentication/Preview Content\"";
-				DEVELOPMENT_TEAM = R4XB56HC9M;
+				DEVELOPMENT_TEAM = 224SJKKLQ3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "BioMetric-Authentication/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -289,9 +293,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BioMetric-Authentication/Preview Content\"";
-				DEVELOPMENT_TEAM = R4XB56HC9M;
+				DEVELOPMENT_TEAM = 224SJKKLQ3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "BioMetric-Authentication/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -301,6 +306,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "iMaxiOS.BioMetric-Authentication";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
