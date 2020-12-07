@@ -10,12 +10,12 @@ import LocalAuthentication
 
 struct Login: View {
     
-    @State var password = ""
-    @State var username = ""
-    
-    @AppStorage("stored_User") var user = "maxim@mail.com"
     @AppStorage("status") var logged = false
-
+    @AppStorage("stored_User") var Stored_User = ""
+    @AppStorage("stored_Password") var Stored_Password = ""
+    
+    @StateObject var loginModel = LoginViewModel()
+    
     var body: some View {
         
         VStack {
@@ -50,11 +50,11 @@ struct Login: View {
                     .font(.title2)
                     .frame(width: 35)
                 
-                TextField("EMAIL", text: $username)
+                TextField("EMAIL", text: $loginModel.email)
                     .autocapitalization(.none)
             }
             .padding()
-            .background(Color.white.opacity(username == "" ? 0 : 0.12))
+            .background(Color.white.opacity(loginModel.email == "" ? 0 : 0.12))
             .cornerRadius(15)
             .padding(.horizontal)
             
@@ -64,11 +64,11 @@ struct Login: View {
                     .font(.title2)
                     .frame(width: 35)
                 
-                SecureField("PASSWORD", text: $password)
+                SecureField("PASSWORD", text: $loginModel.password)
                     .autocapitalization(.none)
             }
             .padding()
-            .background(Color.white.opacity(password == "" ? 0 : 0.12))
+            .background(Color.white.opacity(loginModel.password == "" ? 0 : 0.12))
             .cornerRadius(15)
             .padding(.horizontal)
             .padding(.top)
@@ -83,11 +83,11 @@ struct Login: View {
                         .background(Color("green"))
                         .clipShape(Capsule())
                 })
-                .opacity(username != "" && password != "" ? 1 : 0.5)
-                .disabled(username != "" && password != "" ? false : true)
+                .opacity(loginModel.email != "" && loginModel.password != "" ? 1 : 0.5)
+                .disabled(loginModel.email != "" && loginModel.password != "" ? false : true)
                 
-                if getBioMetricStatus() {
-                    Button(action: authUser, label: {
+                if loginModel.getBioMetricStatus() {
+                    Button(action: loginModel.authUser, label: {
                         Image(systemName: LAContext().biometryType == .faceID ? "faceid" : "touchid")
                             .font(.title)
                             .foregroundColor(.black)
@@ -123,29 +123,5 @@ struct Login: View {
         }
         .background(Color("bg").ignoresSafeArea(.all, edges: .all))
         .animation(.easeInOut)
-    }
-    
-    func getBioMetricStatus() -> Bool{
-        let scanner = LAContext()
-        
-        if username == user && scanner.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: .none) {
-            return true
-        }
-        return false
-    }
-    
-    func authUser() {
-        let scanner = LAContext()
-        
-        scanner.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To Unlock \(username)") { (status, error) in
-            if error != nil {
-                print("🍎🍎🍎\(error!.localizedDescription)")
-                return
-            }
-            
-            withAnimation(.easeInOut) {
-                logged = true
-            }
-        }
     }
 }
