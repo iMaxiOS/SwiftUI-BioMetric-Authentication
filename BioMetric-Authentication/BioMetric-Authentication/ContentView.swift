@@ -16,7 +16,7 @@ struct ContentView: View {
         
         NavigationView {
             if logged {
-                Text("User Logged in.....")
+                Home()
                     .navigationTitle("Home")
                     .navigationBarHidden(false)
                     .preferredColorScheme(.light)

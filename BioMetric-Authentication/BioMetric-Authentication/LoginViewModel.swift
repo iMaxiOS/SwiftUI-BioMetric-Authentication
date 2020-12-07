@@ -15,16 +15,17 @@ class LoginViewModel: ObservableObject {
     @Published var password = ""
     @Published var alert = false
     @Published var alertMessage = ""
+    @Published var isLoading = false
     @Published var store_info = false
     
     @AppStorage("status") var logged = false
-    @AppStorage("stored_User") var Stored_User = ""
-    @AppStorage("stored_Password") var Stored_Password = ""
+    @AppStorage("stored_User") var stored_User = ""
+    @AppStorage("stored_Password") var stored_Password = ""
     
     func getBioMetricStatus() -> Bool {
         let scanner = LAContext()
         
-        if email == Stored_User && scanner.canEvaluatePolicy(
+        if email == stored_User && scanner.canEvaluatePolicy(
             .deviceOwnerAuthenticationWithBiometrics,
             error: .none
         ) {
@@ -44,17 +45,29 @@ class LoginViewModel: ObservableObject {
                 print("🍎🍎🍎\(error!.localizedDescription)")
                 return
             }
+            
+            DispatchQueue.main.async {
+                self.password = self.stored_Password
+                self.verifyUser()
+            }
         }
     }
     
     func verifyUser() {
+        
+        isLoading = true
+        
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            
+            self.isLoading = false
+            
             if let error = error {
                 self.alertMessage = error.localizedDescription
                 self.alert.toggle()
+                return
             }
             
-            if self.Stored_User == "" || self.Stored_Password == "" {
+            if self.stored_User == "" || self.stored_Password == "" {
                 self.store_info.toggle()
                 return
             }
