@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  Login.swift
 //  BioMetric-Authentication
 //
 //  Created by Maxim Granchenko on 07.12.2020.
@@ -8,7 +8,7 @@
 import SwiftUI
 import LocalAuthentication
 
-struct Home: View {
+struct Login: View {
     
     @State var password = ""
     @State var username = ""

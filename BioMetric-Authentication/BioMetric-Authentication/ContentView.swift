@@ -21,7 +21,7 @@ struct ContentView: View {
                     .navigationBarHidden(false)
                     .preferredColorScheme(.light)
             } else {
-                Home()
+                Login()
                     .preferredColorScheme(.dark)
                     .navigationBarHidden(true)
             }
