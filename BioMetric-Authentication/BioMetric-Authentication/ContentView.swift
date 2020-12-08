@@ -16,7 +16,7 @@ struct ContentView: View {
         
         NavigationView {
             if logged {
-                Home()
+                TabBarView()
                     .navigationTitle("Home")
                     .navigationBarHidden(false)
                     .preferredColorScheme(.light)
