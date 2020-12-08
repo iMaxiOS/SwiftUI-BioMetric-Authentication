@@ -1,14 +1,14 @@
 //
-//  Home.swift
+//  SettingView.swift
 //  BioMetric-Authentication
 //
-//  Created by Maxim Granchenko on 07.12.2020.
+//  Created by Maxim Granchenko on 08.12.2020.
 //
 
 import SwiftUI
 import Firebase
 
-struct Home: View {
+struct SettingView: View {
     
     @AppStorage("status") var logged = false
     

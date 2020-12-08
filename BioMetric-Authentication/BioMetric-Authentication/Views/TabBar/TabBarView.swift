@@ -13,7 +13,7 @@ struct TabBarView: View {
         TabView {
             Home()
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "house.fill")
                 }
             Text("Search")
                 .tabItem {
@@ -21,11 +21,11 @@ struct TabBarView: View {
                 }
             Text("Like")
                 .tabItem {
-                    Image(systemName: "suit.heart")
+                    Image(systemName: "suit.heart.fill")
                 }
-            Text("Setting")
+            SettingView()
                 .tabItem {
-                    Image(systemName: "person")
+                    Image(systemName: "person.fill")
                 }
         }
     }

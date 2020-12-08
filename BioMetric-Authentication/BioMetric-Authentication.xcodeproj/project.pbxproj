@@ -13,6 +13,7 @@
 		AC04EDAE257E299700788A7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC04EDAD257E299700788A7A /* Preview Assets.xcassets */; };
 		AC04EDBA257E2B6400788A7A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04EDB9257E2B6400788A7A /* Login.swift */; };
 		ACBACD07257F8F43001F02E4 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBACD06257F8F43001F02E4 /* TabBarView.swift */; };
+		ACBACD0A257F92B2001F02E4 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBACD09257F92B2001F02E4 /* SettingView.swift */; };
 		ACC70607257E565600B8EB7A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC70606257E565600B8EB7A /* LoginViewModel.swift */; };
 		ACEA6AAE257E62AD002861DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACEA6AAD257E62AD002861DC /* GoogleService-Info.plist */; };
 		ACEA6AB1257E6818002861DC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA6AB0257E6818002861DC /* Home.swift */; };
@@ -31,6 +32,7 @@
 		AC04EDAF257E299700788A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC04EDB9257E2B6400788A7A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		ACBACD06257F8F43001F02E4 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		ACBACD09257F92B2001F02E4 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		ACC70606257E565600B8EB7A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ACEA6AAD257E62AD002861DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACEA6AB0257E6818002861DC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -91,13 +93,62 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		ACC70603257E560900B8EB7A /* Views */ = {
+		ACBACD0C257F9320001F02E4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				AC04EDB9257E2B6400788A7A /* Login.swift */,
-				ACEA6AB0257E6818002861DC /* Home.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ACBACD0E257F9328001F02E4 /* Loading Screen */ = {
+			isa = PBXGroup;
+			children = (
 				ACEA6AC2257E6CAC002861DC /* Loading Screen.swift */,
+			);
+			path = "Loading Screen";
+			sourceTree = "<group>";
+		};
+		ACBACD0F257F9333001F02E4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ACEA6AB0257E6818002861DC /* Home.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ACBACD11257F933A001F02E4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				ACBACD09257F92B2001F02E4 /* SettingView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		ACBACD12257F9342001F02E4 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
 				ACBACD06257F8F43001F02E4 /* TabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		ACBACD14257F9354001F02E4 /* Login Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACC70606257E565600B8EB7A /* LoginViewModel.swift */,
+			);
+			name = "Login Model";
+			sourceTree = "<group>";
+		};
+		ACC70603257E560900B8EB7A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACBACD0F257F9333001F02E4 /* Home */,
+				ACBACD0E257F9328001F02E4 /* Loading Screen */,
+				ACBACD0C257F9320001F02E4 /* Login */,
+				ACBACD11257F933A001F02E4 /* Settings */,
+				ACBACD12257F9342001F02E4 /* TabBar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,7 +156,7 @@
 		ACC70605257E563100B8EB7A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				ACC70606257E565600B8EB7A /* LoginViewModel.swift */,
+				ACBACD14257F9354001F02E4 /* Login Model */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -246,6 +297,7 @@
 				ACBACD07257F8F43001F02E4 /* TabBarView.swift in Sources */,
 				ACEA6AB1257E6818002861DC /* Home.swift in Sources */,
 				ACEA6AC3257E6CAC002861DC /* Loading Screen.swift in Sources */,
+				ACBACD0A257F92B2001F02E4 /* SettingView.swift in Sources */,
 				AC04EDBA257E2B6400788A7A /* Login.swift in Sources */,
 				AC04EDA7257E299600788A7A /* BioMetric_AuthenticationApp.swift in Sources */,
 			);
