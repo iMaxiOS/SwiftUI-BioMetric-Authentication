@@ -15,7 +15,7 @@ struct TabBarView: View {
     var body: some View {
         ZStack {
             TabView {
-                Home(animation: animation, tabData: tabData)
+                Home(tabData: tabData, animation: animation)
                     .tabItem { Image(systemName: "house.fill") }
                 Search()
                     .tabItem { Image(systemName: "magnifyingglass") }

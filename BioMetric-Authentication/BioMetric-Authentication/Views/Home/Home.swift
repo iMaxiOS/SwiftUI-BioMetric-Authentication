@@ -10,22 +10,49 @@ import Firebase
 
 struct Home: View {
     
-    var animation: Namespace.ID
-    @ObservedObject var tabData: TabViewModel
-    
     @State var items = [
-        Item(title: "Beson Limon Juice", price: "$15.44", discont: "7%", image: "p1"),
-        Item(title: "Beson Pine Juice", price: "$25.00", discont: "10%", image: "p2"),
-        Item(title: "Beson Orange Juice", price: "$35.80", discont: "15%", image: "p3")
+        Item(title: "Besom Lemon Juice", price: "$25.99", discont: "7%", image: "p1"),
+        Item(title: "Besom Pine Juice", price: "$15.99", discont: "25%", image: "p2"),
+        Item(title: "Besom Orange Juice", price: "$20.99", discont: "10%", image: "p3"),
     ]
-        
+    
+    @ObservedObject var tabData : TabViewModel
+    var animation: Namespace.ID
+    
     var body: some View {
-        
-        ScrollView(.vertical, showsIndicators: false, content: {
-            ForEach(items) { item in
-                Card(item: item, tabData: tabData, animation: animation)
+        VStack{
+            ZStack{
+                HStack{
+                    Button(action: {}) {
+                        Image(systemName: "line.horizontal.3.decrease")
+                            .font(.system(size: 24, weight: .heavy))
+                            .foregroundColor(.primary)
+                    }
+                    
+                    Spacer()
+                    
+                    Button(action: {}) {
+                        Image(systemName: "bag")
+                            .font(.system(size: 24, weight: .heavy))
+                            .foregroundColor(.primary)
+                    }
+                }
+                
+                Text("Besom")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.primary)
             }
-        })
-        .padding(.horizontal)
+            .padding()
+
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 20) {
+                    ForEach(items){item in
+                        Card(item: item, tabData: tabData,animation: animation)
+                    }
+                }
+                .padding()
+            }
+        }
     }
 }

@@ -110,7 +110,7 @@ struct Detail: View {
             .offset(y: -35)
             .padding(.bottom,-35)
             
-            ScrollView(isSmall ? .vertical : .init(), showsIndicators: false) {
+            ScrollView(.vertical, showsIndicators: false) {
                 
                 VStack {
                     HStack {
