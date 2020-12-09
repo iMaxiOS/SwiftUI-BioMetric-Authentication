@@ -20,8 +20,8 @@ struct TabBarView: View {
                 Search()
                     .tabItem { Image(systemName: "magnifyingglass") }
                     .navigationBarHidden(true)
-                Text("Like")
-                    .tabItem { Image(systemName: "suit.heart.fill") }
+                Weather()
+                    .tabItem { Image(systemName: "thermometer.sun.fill") }
                 SettingView()
                     .tabItem { Image(systemName: "person.fill") }
             }
