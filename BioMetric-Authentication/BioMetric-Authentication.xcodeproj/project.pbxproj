@@ -86,8 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				ACEA6AAD257E62AD002861DC /* GoogleService-Info.plist */,
-				AC04EDA6257E299600788A7A /* BioMetric_AuthenticationApp.swift */,
-				AC04EDA8257E299600788A7A /* ContentView.swift */,
 				ACC70603257E560900B8EB7A /* Views */,
 				ACC70605257E563100B8EB7A /* ViewModel */,
 				AC04EDAA257E299700788A7A /* Assets.xcassets */,
@@ -135,6 +133,15 @@
 				AC85D8EE2580D3E200B3B7D9 /* TabViewModel.swift */,
 			);
 			name = "Tab Model";
+			sourceTree = "<group>";
+		};
+		AC85D8F42580E18F00B3B7D9 /* Content View */ = {
+			isa = PBXGroup;
+			children = (
+				AC04EDA6257E299600788A7A /* BioMetric_AuthenticationApp.swift */,
+				AC04EDA8257E299600788A7A /* ContentView.swift */,
+			);
+			path = "Content View";
 			sourceTree = "<group>";
 		};
 		ACBACD0C257F9320001F02E4 /* Login */ = {
@@ -191,6 +198,7 @@
 		ACC70603257E560900B8EB7A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC85D8F42580E18F00B3B7D9 /* Content View */,
 				ACBACD0F257F9333001F02E4 /* Home */,
 				ACBACD0E257F9328001F02E4 /* Loading Screen */,
 				ACBACD0C257F9320001F02E4 /* Login */,
