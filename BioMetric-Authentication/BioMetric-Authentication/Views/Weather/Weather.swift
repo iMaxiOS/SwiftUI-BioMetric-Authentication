@@ -29,7 +29,7 @@ struct Weather: View {
                     .font(.system(size: 36, weight: .bold))
                     .foregroundColor(.white)
                 
-                Image(systemName: "cloud.sun.fill")
+                Image(systemName: isNight ? "moon.stars.fill" : "cloud.sun.fill")
                     .resizable()
                     .renderingMode(.original)
                     .aspectRatio(contentMode: .fit)
