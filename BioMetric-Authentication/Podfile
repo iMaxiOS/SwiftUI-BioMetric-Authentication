@@ -7,5 +7,6 @@ target 'BioMetric-Authentication' do
 
   # Pods for BioMetric-Authentication
   pod 'Firebase/Auth'
+  pod 'SDWebImage'
 
 end

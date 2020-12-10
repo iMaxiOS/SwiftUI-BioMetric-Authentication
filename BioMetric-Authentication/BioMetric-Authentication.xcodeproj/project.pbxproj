@@ -107,12 +107,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AC85D8DB2580CA9200B3B7D9 /* Item */ = {
+		AC85D8DB2580CA9200B3B7D9 /* Home Item */ = {
 			isa = PBXGroup;
 			children = (
 				AC85D8DC2580CAAC00B3B7D9 /* Item.swift */,
 			);
-			name = Item;
+			name = "Home Item";
 			sourceTree = "<group>";
 		};
 		AC85D8E22580CD7800B3B7D9 /* Views */ = {
@@ -156,12 +156,12 @@
 			path = Weather;
 			sourceTree = "<group>";
 		};
-		AC85D8FB2580FFD500B3B7D9 /* WeatherItem */ = {
+		AC85D8FB2580FFD500B3B7D9 /* Weather Item */ = {
 			isa = PBXGroup;
 			children = (
 				AC2A31EC258101360022E54D /* WeatherItem.swift */,
 			);
-			name = WeatherItem;
+			name = "Weather Item";
 			sourceTree = "<group>";
 		};
 		ACBACD0C257F9320001F02E4 /* Login */ = {
@@ -233,10 +233,10 @@
 		ACC70605257E563100B8EB7A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				AC85D8FB2580FFD500B3B7D9 /* WeatherItem */,
-				AC85D8ED2580D3C900B3B7D9 /* Tab Model */,
-				AC85D8DB2580CA9200B3B7D9 /* Item */,
+				AC85D8DB2580CA9200B3B7D9 /* Home Item */,
 				ACBACD14257F9354001F02E4 /* Login Model */,
+				AC85D8ED2580D3C900B3B7D9 /* Tab Model */,
+				AC85D8FB2580FFD500B3B7D9 /* Weather Item */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
