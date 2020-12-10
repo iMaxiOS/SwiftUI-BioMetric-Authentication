@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,9 @@
 		ACEA6AAE257E62AD002861DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACEA6AAD257E62AD002861DC /* GoogleService-Info.plist */; };
 		ACEA6AB1257E6818002861DC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA6AB0257E6818002861DC /* Home.swift */; };
 		ACEA6AC3257E6CAC002861DC /* Loading Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA6AC2257E6CAC002861DC /* Loading Screen.swift */; };
+		ACFFF15425822A6000F775CD /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFFF15325822A6000F775CD /* SearchModel.swift */; };
+		ACFFF1632582810300F775CD /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFFF1622582810300F775CD /* Indicator.swift */; };
+		ACFFF1672582853A00F775CD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ACFFF1662582853A00F775CD /* SDWebImageSwiftUI */; };
 		BF15D6ED012EF9C81D2C89C3 /* Pods_BioMetric_Authentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DF092EACC57B19F67FC41A /* Pods_BioMetric_Authentication.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,8 @@
 		ACEA6AAD257E62AD002861DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACEA6AB0257E6818002861DC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		ACEA6AC2257E6CAC002861DC /* Loading Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loading Screen.swift"; sourceTree = "<group>"; };
+		ACFFF15325822A6000F775CD /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		ACFFF1622582810300F775CD /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		C69AEEC6927923A8AFBCB216 /* Pods-BioMetric-Authentication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BioMetric-Authentication.release.xcconfig"; path = "Target Support Files/Pods-BioMetric-Authentication/Pods-BioMetric-Authentication.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFFF1672582853A00F775CD /* SDWebImageSwiftUI in Frameworks */,
 				BF15D6ED012EF9C81D2C89C3 /* Pods_BioMetric_Authentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,13 +178,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		ACBACD0E257F9328001F02E4 /* Loading Screen */ = {
+		ACBACD0E257F9328001F02E4 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
 				ACEA6AC2257E6CAC002861DC /* Loading Screen.swift */,
 				AC85D8F12580DB3600B3B7D9 /* CustomCorner.swift */,
+				ACFFF1622582810300F775CD /* Indicator.swift */,
 			);
-			path = "Loading Screen";
+			path = VIews;
 			sourceTree = "<group>";
 		};
 		ACBACD0F257F9333001F02E4 /* Home */ = {
@@ -220,11 +227,11 @@
 			children = (
 				AC85D8F42580E18F00B3B7D9 /* Content View */,
 				ACBACD0F257F9333001F02E4 /* Home */,
-				ACBACD0E257F9328001F02E4 /* Loading Screen */,
 				ACBACD0C257F9320001F02E4 /* Login */,
 				AC85D8E62580D1F900B3B7D9 /* Search */,
 				ACBACD11257F933A001F02E4 /* Settings */,
 				ACBACD12257F9342001F02E4 /* TabBar */,
+				ACBACD0E257F9328001F02E4 /* VIews */,
 				AC85D8F72580F83200B3B7D9 /* Weather */,
 			);
 			path = Views;
@@ -233,12 +240,21 @@
 		ACC70605257E563100B8EB7A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ACFFF15225822A4400F775CD /* Search */,
 				AC85D8DB2580CA9200B3B7D9 /* Home Item */,
 				ACBACD14257F9354001F02E4 /* Login Model */,
 				AC85D8ED2580D3C900B3B7D9 /* Tab Model */,
 				AC85D8FB2580FFD500B3B7D9 /* Weather Item */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACFFF15225822A4400F775CD /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				ACFFF15325822A6000F775CD /* SearchModel.swift */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 		C543C84036A99D2040CBD506 /* Pods */ = {
@@ -276,6 +292,9 @@
 			dependencies = (
 			);
 			name = "BioMetric-Authentication";
+			packageProductDependencies = (
+				ACFFF1662582853A00F775CD /* SDWebImageSwiftUI */,
+			);
 			productName = "BioMetric-Authentication";
 			productReference = AC04EDA3257E299600788A7A /* BioMetric-Authentication.app */;
 			productType = "com.apple.product-type.application";
@@ -303,6 +322,9 @@
 				Base,
 			);
 			mainGroup = AC04ED9A257E299600788A7A;
+			packageReferences = (
+				ACFFF1652582853A00F775CD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = AC04EDA4257E299600788A7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -379,9 +401,11 @@
 				AC85D8F92580F83D00B3B7D9 /* Weather.swift in Sources */,
 				AC85D8DD2580CAAC00B3B7D9 /* Item.swift in Sources */,
 				AC04EDA9257E299600788A7A /* ContentView.swift in Sources */,
+				ACFFF1632582810300F775CD /* Indicator.swift in Sources */,
 				ACBACD07257F8F43001F02E4 /* TabBarView.swift in Sources */,
 				ACEA6AB1257E6818002861DC /* Home.swift in Sources */,
 				ACEA6AC3257E6CAC002861DC /* Loading Screen.swift in Sources */,
+				ACFFF15425822A6000F775CD /* SearchModel.swift in Sources */,
 				ACBACD0A257F92B2001F02E4 /* SettingView.swift in Sources */,
 				AC2A31ED258101360022E54D /* WeatherItem.swift in Sources */,
 				AC85D8E42580CD8900B3B7D9 /* Card.swift in Sources */,
@@ -580,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACFFF1652582853A00F775CD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACFFF1662582853A00F775CD /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACFFF1652582853A00F775CD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC04ED9B257E299600788A7A /* Project object */;
 }
