@@ -11,6 +11,7 @@ import Firebase
 struct SettingView: View {
     
     @AppStorage("status") var logged = false
+    @State private var isPresentNotificationView = false
     
     @State private var settings = [
         SettingModel(id: 0, image: "1", title: "Account"),
@@ -36,12 +37,17 @@ struct SettingView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 ForEach(settings, id: \.self) { i in
                     Button {
-                        if i.id == 6 {
+                        switch i.id {
+                        case 1:
+                            self.isPresentNotificationView.toggle()
+                        case 6:
                             try! Auth.auth().signOut()
-                            
+
                             withAnimation {
                                 self.logged = false
                             }
+                        default:
+                            break
                         }
                     } label: {
                         HStack {
@@ -66,6 +72,9 @@ struct SettingView: View {
                                 .foregroundColor(.gray)
                         }
                     }
+                    .sheet(isPresented: $isPresentNotificationView, content: {
+                        NotificationView()
+                    })
                 }
             }
         }

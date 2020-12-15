@@ -20,10 +20,11 @@
 		AC85D8EF2580D3E200B3B7D9 /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85D8EE2580D3E200B3B7D9 /* TabViewModel.swift */; };
 		AC85D8F22580DB3600B3B7D9 /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85D8F12580DB3600B3B7D9 /* CustomCorner.swift */; };
 		AC85D8F92580F83D00B3B7D9 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85D8F82580F83D00B3B7D9 /* Weather.swift */; };
+		ACA4D5F32588F350001B5984 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA4D5F22588F350001B5984 /* SettingModel.swift */; };
 		ACBACD07257F8F43001F02E4 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBACD06257F8F43001F02E4 /* TabBarView.swift */; };
 		ACBACD0A257F92B2001F02E4 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBACD09257F92B2001F02E4 /* SettingView.swift */; };
 		ACC70607257E565600B8EB7A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC70606257E565600B8EB7A /* LoginViewModel.swift */; };
-		ACCDFC742588B36E00B7FD9A /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDFC732588B36E00B7FD9A /* SettingModel.swift */; };
+		ACCDFC782588E30300B7FD9A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDFC772588E30300B7FD9A /* NotificationView.swift */; };
 		ACEA6AAE257E62AD002861DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACEA6AAD257E62AD002861DC /* GoogleService-Info.plist */; };
 		ACEA6AB1257E6818002861DC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA6AB0257E6818002861DC /* Home.swift */; };
 		ACEA6AC3257E6CAC002861DC /* Loading Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA6AC2257E6CAC002861DC /* Loading Screen.swift */; };
@@ -51,10 +52,11 @@
 		AC85D8EE2580D3E200B3B7D9 /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
 		AC85D8F12580DB3600B3B7D9 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
 		AC85D8F82580F83D00B3B7D9 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		ACA4D5F22588F350001B5984 /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		ACBACD06257F8F43001F02E4 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		ACBACD09257F92B2001F02E4 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		ACC70606257E565600B8EB7A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		ACCDFC732588B36E00B7FD9A /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		ACCDFC772588E30300B7FD9A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		ACEA6AAD257E62AD002861DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACEA6AB0257E6818002861DC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		ACEA6AC2257E6CAC002861DC /* Loading Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loading Screen.swift"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		ACBACD11257F933A001F02E4 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				ACCDFC762588E2EB00B7FD9A /* NotificationView */,
 				ACBACD09257F92B2001F02E4 /* SettingView.swift */,
 			);
 			path = Settings;
@@ -255,9 +258,17 @@
 		ACCDFC722588B35A00B7FD9A /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				ACCDFC732588B36E00B7FD9A /* SettingModel.swift */,
+				ACA4D5F22588F350001B5984 /* SettingModel.swift */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		ACCDFC762588E2EB00B7FD9A /* NotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				ACCDFC772588E30300B7FD9A /* NotificationView.swift */,
+			);
+			path = NotificationView;
 			sourceTree = "<group>";
 		};
 		ACFFF15225822A4400F775CD /* Search */ = {
@@ -409,11 +420,11 @@
 				ACC70607257E565600B8EB7A /* LoginViewModel.swift in Sources */,
 				AC85D8EF2580D3E200B3B7D9 /* TabViewModel.swift in Sources */,
 				AC85D8EB2580D38A00B3B7D9 /* Detail.swift in Sources */,
+				ACA4D5F32588F350001B5984 /* SettingModel.swift in Sources */,
 				AC85D8F92580F83D00B3B7D9 /* Weather.swift in Sources */,
 				AC85D8DD2580CAAC00B3B7D9 /* Item.swift in Sources */,
 				AC04EDA9257E299600788A7A /* ContentView.swift in Sources */,
 				ACFFF1632582810300F775CD /* Indicator.swift in Sources */,
-				ACCDFC742588B36E00B7FD9A /* SettingModel.swift in Sources */,
 				ACBACD07257F8F43001F02E4 /* TabBarView.swift in Sources */,
 				ACEA6AB1257E6818002861DC /* Home.swift in Sources */,
 				ACEA6AC3257E6CAC002861DC /* Loading Screen.swift in Sources */,
@@ -424,6 +435,7 @@
 				AC85D8F22580DB3600B3B7D9 /* CustomCorner.swift in Sources */,
 				AC04EDBA257E2B6400788A7A /* Login.swift in Sources */,
 				AC04EDA7257E299600788A7A /* BioMetric_AuthenticationApp.swift in Sources */,
+				ACCDFC782588E30300B7FD9A /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
