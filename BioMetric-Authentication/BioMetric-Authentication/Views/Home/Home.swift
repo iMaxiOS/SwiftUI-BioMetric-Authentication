@@ -48,7 +48,7 @@ struct Home: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20) {
                     ForEach(items){item in
-                        Card(item: item, tabData: tabData,animation: animation)
+                        Card(item: item, tabData: tabData, animation: animation)
                     }
                 }
                 .padding()

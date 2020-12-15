@@ -11,7 +11,8 @@ import Firebase
 struct SettingView: View {
     
     @AppStorage("status") var logged = false
-    @State private var isPresentNotificationView = false
+    
+    @State private var isPresent = false
     
     @State private var settings = [
         SettingModel(id: 0, image: "1", title: "Account"),
@@ -38,8 +39,8 @@ struct SettingView: View {
                 ForEach(settings, id: \.self) { i in
                     Button {
                         switch i.id {
-                        case 1:
-                            self.isPresentNotificationView.toggle()
+                        case 0:
+                            self.isPresent.toggle()
                         case 6:
                             try! Auth.auth().signOut()
 
@@ -58,7 +59,7 @@ struct SettingView: View {
                                 .frame(width: 50, height: 50)
                                 .padding(.vertical, 10)
                             
-                            Text(i.title)
+                            Text(verbatim: i.title)
                                 .font(.subheadline)
                                 .fontWeight(.regular)
                                 .foregroundColor(.gray)
@@ -72,8 +73,8 @@ struct SettingView: View {
                                 .foregroundColor(.gray)
                         }
                     }
-                    .sheet(isPresented: $isPresentNotificationView, content: {
-                        NotificationView()
+                    .sheet(isPresented: $isPresent, content: {
+                        AccountView()
                     })
                 }
             }
