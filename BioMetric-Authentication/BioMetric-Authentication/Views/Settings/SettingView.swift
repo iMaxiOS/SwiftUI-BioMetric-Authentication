@@ -12,22 +12,63 @@ struct SettingView: View {
     
     @AppStorage("status") var logged = false
     
+    @State private var settings = [
+        SettingModel(id: 0, image: "1", title: "Account"),
+        SettingModel(id: 1, image: "2", title: "Notification"),
+        SettingModel(id: 2, image: "3", title: "Privacy"),
+        SettingModel(id: 3, image: "4", title: "Help Center"),
+        SettingModel(id: 4, image: "5", title: "General"),
+        SettingModel(id: 5, image: "6", title: "About Us"),
+        SettingModel(id: 6, image: "7", title: "Log out")
+    ]
+    
     var body: some View {
-        
-        VStack(spacing: 15) {
-            Text(Auth.auth().currentUser?.email ?? "")
-            Text(Auth.auth().currentUser?.uid ?? "")
-            
-            Button(action: {
-                try! Auth.auth().signOut()
+        VStack {
+            HStack {
+                Text("Settings")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
                 
-                withAnimation {
-                    self.logged = false
+                Spacer(minLength: 0)
+            }
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                ForEach(settings, id: \.self) { i in
+                    Button {
+                        if i.id == 6 {
+                            try! Auth.auth().signOut()
+                            
+                            withAnimation {
+                                self.logged = false
+                            }
+                        }
+                    } label: {
+                        HStack {
+                            Image(i.image)
+                                .resizable()
+                                .clipped()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 50, height: 50)
+                                .padding(.vertical, 10)
+                            
+                            Text(i.title)
+                                .font(.subheadline)
+                                .fontWeight(.regular)
+                                .foregroundColor(.gray)
+                            
+                            Spacer(minLength: 15)
+                            
+                            Image(systemName: "chevron.forward")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20, height: 15, alignment: .center)
+                                .foregroundColor(.gray)
+                        }
+                    }
                 }
-            }, label: {
-                Text("LogOut")
-                    .fontWeight(.heavy)
-            })
+            }
         }
+        .padding()
     }
 }
